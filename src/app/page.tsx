@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-2">
       <Login />
-      <button className="bg-blue-500 p-2 rounded-md" onClick={() => insertUser({name: 'test', pfp: 'example.com'})}> Test User </button>
+      <button className="bg-blue-500 p-2 rounded-md" onClick={() => insertUser({name: 'test', pfp: 'example.com', email: 'email@test.com'})}> Test User </button>
       <button className="bg-blue-500 p-2 rounded-md" onClick={() => insertData({text: "test"})}>Test Data Insert</button>
       <button className="bg-red-500 p-2 rounded-md" onClick={() => signOut()}>Sign out</button>
 
