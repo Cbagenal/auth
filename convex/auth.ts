@@ -30,16 +30,18 @@ export const queryUser = query({
 
 export const insertData = mutation({
     args: {
+        authorId: v.string(),
         text: v.string(),
+        recipientId: v.string(),
     },
 
     handler: (ctx, args) => {
-        ctx.db.insert("content", args)
+        ctx.db.insert("conversations", args)
     }
 })
 
 export const queryData = query({
     handler: (ctx) => {
-        return ctx.db.query("content").collect()
+        return ctx.db.query("conversations").collect()
     }
 })

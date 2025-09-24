@@ -8,7 +8,10 @@ export default defineSchema({
         email: v.string(),
     }) .index("by_email", ["email"]),
 
-    content: defineTable({
-        text: v.string()
+    conversations: defineTable({
+        authorId: v.string(),
+        text: v.string(),
+        recipientId: v.string()
+
     })
 })
